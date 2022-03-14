@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastrar Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="nome" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Cpf</ion-label>
+        <ion-input formControlName="cpf" type="text" placeholder="cpf" [brmasker]="{person: true}" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-label>
+        <ion-input type="hidden" formControlName="cupom" value={{randomNumber}} required >
+        </ion-input>
+      </ion-label>
+
+        <center>
+          <ion-col>
+            <ion-button (click)="genRandomNumber()" color="tertiary">Gerar Cupom</ion-button>
+          </ion-col>
+        </center>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Add</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">SORTEIO VW POLO 1.0 Mpi </ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+
+  
+<ion-content>
+  <div class="container">
+    <img src="../../assets/polo.png"/>
+  </div>
+  <ion-list>
+    <div class="data">
+    <ng-container *ngFor="let user of Users; index as i; last as isLast">
+      <ion-item *ngIf="i == 20">
+        <center>
+          <ion-col>
+            <ion-button color="tertiary">Realizar Sorteio</ion-button>
+          </ion-col>
+          <p>Número da sorteado </p>
+            <h1>098404</h1>
+          <ng-container  *ngFor="let user of Users | order_by: 'cupom'; index as i">
+            <ion-item *ngIf="i == 0" >
+              Ganhador: {{user.nome}} 
+              <br>
+              Cupom: {{user.cupom}}
+              <br>
+              CPF: {{user.cpf}}
+            </ion-item>
+        <p>{{user.cupom}}</p> 
+        </ng-container >
+        </center>
+      </ion-item>
+      <center>
+      <span *ngIf="isLast">Número de inscritos no sorteio: {{i}}</span>
+    </center>
+    </ng-container>
+  </div>
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "ionic-rest-api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
