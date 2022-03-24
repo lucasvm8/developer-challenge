@@ -2,13 +2,13 @@
 
 # dependencias
 
-Node
+Node - v16.14.0
 https://nodejs.org/en/
 
-NestJS
+NestJS - 8.2.2
 npm install -g @nestjs/cli
 
-Ionic/Angular
+Ionic/Angular - 6.18.2
 npm install -g @ionic/cli
 
 # banco de dados núvem (Cluster)
