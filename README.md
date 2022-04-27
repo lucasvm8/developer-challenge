@@ -1,4 +1,4 @@
-# desafio-panplus
+# challenge
 
 # dependencias
 
